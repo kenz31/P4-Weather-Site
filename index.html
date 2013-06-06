@@ -1,26 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <title>Weather App</title>
+<head>
+<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="css/styles.css" rel="stylesheet" type="css/stylesheet">
+    <link href="css/styles.css" rel="stylesheet" media="screen">
     
-  </head>
-  <body>
-  	<div class="container">
-    
-    	<!--<input label="Enter Zip"/>
-        <button>Get Weather</button>-->
-    	<div id="weather"></div>
-    	
-	</div><!---End of Container-->
-	<script src="js/simpleWeathermin.js"></script>
-    <script src="js/simpleWeather.js"></script>
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
+<title>Weather App</title>
+</head>
 
-    
-  </body>
+<body>
+	<div class="container-fluid">
+   
+    	<div class="row-fluid">
+        	<div class="span6 offset3 weather">
+                <input type="text" value="Enter Zip Code"/>
+                <button>Get Weather</button>
+                <div id="weather"></div>
+            </div>
+            
+        </div>
+	</div>
+</body>
+
+	<script src="http://code.jquery.com/jquery.js"></script>
+    <script src="http://ricostacruz.com/jquery.transit/jquery.transit.min.js"></script>    
+    <script src="js/simpleWeather.js"></script>
+    <script src="js/simpleWeathermin.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  	<script src="js/scripts.js"></script>
 </html>
