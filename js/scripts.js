@@ -16,10 +16,10 @@ $(document).ready(function() {
 		  html = '<h2>'+weather.city+'</h2>';
 		  html += '<ul><li class="temp">'+weather.temp+'&deg;'+weather.units.temp+'</li>';
 		  html += '<li class="currently">'+weather.currently+'</li>';
-		  html += '<li class="hilo">'+weather.high+' '+weather.low+'</li></ul>';
+		  html += '<li class="hilo">'+weather.high+'	'+'<p class="lo">'+weather.low+'</p>'+'</li></ul>';
 		  html += '<ul class="tmr"><li class="tomorrow">'+weather.tomorrow.day+' '+weather.tomorrow.date+'</li>'
 		  html += '<li class="tFore tomorrow">'+weather.tomorrow.forecast+'</li>';
- 		  html += '<li class="tomorrow">'+weather.tomorrow.high+' '+weather.tomorrow.low+'</li></ul>';			
+ 		  html += '<li class="tomorrow">'+weather.tomorrow.high+'	'+weather.tomorrow.low+'</li></ul>';			
 		  $("#weather").html(html);
 		  console.log(weather.code);
 		  if(weather.code==33 || weather.code==31)
@@ -55,33 +55,33 @@ $(document).ready(function() {
 			
 			if(weather.tomorrow.code==33 || weather.tomorrow.code==31)
 			{
-			$('.tFore').add('<img class="Timage" src="img/3.gif"/>').insertAfter(".tFore");
+			$('.tFore').add('<img class="Timage" src="img/3.gif"/>').insertBefore(".tFore");
 			}
 			else if(weather.tomorrow.code==27 || weather.tomorrow.code==29)
 			{
-			$('.tFore').add('<img class="Timage" src="img/9.gif"/>').insertAfter(".tFore");
+			$('.tFore').add('<img class="Timage" src="img/9.gif"/>').insertBefore(".tFore");
 			}
 			else if((weather.tomorrow.code>2 && weather.tomorrow.code<5) ||(weather.tomorrow.code>36 && weather.tomorrow.code<40)||weather.tomorrow.code==47||weather.tomorrow.code==45)
 			{
-			$('.tFore').add('<img class="Timage" src="img/15.gif"/>').insertAfter(".tFore");
+			$('.tFore').add('<img class="Timage" src="img/15.gif"/>').insertBefore(".tFore");
 			}
 			else if((weather.tomorrow.code>7 && weather.tomorrow.code<13) ||weather.tomorrow.code==40)
 			{
-			$('.tFore').add('<img class="Timage" src="img/18.gif"/>').insertAfter(".tFore");
+			$('.tFore').add('<img class="Timage" src="img/18.gif"/>').insertBefore(".tFore");
 			}
 			else if((weather.tomorrow.code>4 && weather.tomorrow.code<8) ||(weather.tomorrow.code>12 && weather.tomorrow.code<19)||weather.tomorrow.code==35||weather.tomorrow.code==46 || (weather.tomorrow.code>40 && weather.tomorrow.code<44))
 			{
-			$('.tFore').add('<img class="Timage" src="img/23.gif"/>').insertAfter(".tFore");
+			$('.tFore').add('<img class="Timage" src="img/23.gif"/>').insertBefore(".tFore");
 			}
 			
 			else if(weather.tomorrow.code ==32 || weather.tomorrow.code==36)
 			{
-				$('.tFore').add('<img class="Timage" src="img/2.gif"/>').insertAfter(".tFore");				
+				$('.tFore').add('<img class="Timage" src="img/2.gif"/>').insertBefore(".tFore");				
 			}
 			
 			else
 			{
-				$('.tFore').add('<img class="Timage" src="img/8.gif"/>').insertAfter(".tFore");			
+				$('.tFore').add('<img class="Timage" src="img/8.gif"/>').insertBefore(".tFore");			
 			}
 		},
 		
